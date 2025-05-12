@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +12,11 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #343a40;
+            -webkit-text-size-adjust: 100%; /* Prevent font scaling on iOS */
         }
 
         header {
-            background-color: #003366; /* Deeper blue for header */
+            background-color: #003366;
             color: #fff;
             padding: 1.5rem 0;
             text-align: center;
@@ -28,7 +28,7 @@
 
         .container {
             width: 90%;
-            max-width: 1300px; /* Slightly wider for more content */
+            max-width: 1300px;
             margin: auto;
             overflow: hidden;
             padding: 0 20px;
@@ -36,65 +36,64 @@
 
         section {
             background: #fff;
-            margin-bottom: 30px; /* Increased spacing */
-            padding: 30px; /* Increased padding */
-            border-radius: 12px; /* Softer radius */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.07); /* More pronounced shadow */
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
         }
 
         section > h2 { /* Phase Titles */
-            color: #003366; /* Match header */
-            border-bottom: 4px solid #005c99; /* Complementary blue */
+            color: #003366;
+            border-bottom: 4px solid #005c99;
             padding-bottom: 15px;
             margin-top: 0;
-            font-size: 2em; /* Larger phase titles */
+            font-size: 2em;
         }
 
-        .step > h3, .framework-section > h3 { /* Clickable main titles for sections/frameworks */
-            background-color: #005c99; /* Primary blue, slightly lighter */
+        .step > h3, .framework-section > h3 { /* Clickable main titles */
+            background-color: #005c99;
             color: white;
-            padding: 15px 18px; /* Increased padding */
-            margin-top: 25px; /* Increased spacing */
+            padding: 15px 18px;
+            margin-top: 25px;
             margin-bottom: 0;
             cursor: pointer;
-            border-radius: 8px; /* Softer radius */
+            border-radius: 8px;
             transition: background-color 0.3s ease;
-            font-size: 1.6em; /* Larger step/framework titles */
+            font-size: 1.6em;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .step > h3::after, .framework-section > h3::after {
             content: '▼'; /* Collapsed state indicator */
-            font-size: 0.7em; /* Smaller arrow relative to larger text */
+            font-size: 0.7em;
             margin-left: 15px;
         }
         .step > h3.open::after, .framework-section > h3.open::after {
             content: '▲'; /* Open state indicator */
         }
 
-
-        .framework-section > h3 { /* Different color for main framework titles for distinction */
-            background-color: #1d7a4b; /* Richer Green for frameworks */
+        .framework-section > h3 { /* Framework titles */
+            background-color: #1d7a4b;
         }
 
         .step > h3:hover, .framework-section > h3:hover {
-            background-color: #004466; /* Darker blue on hover */
+            background-color: #004466;
         }
         .framework-section > h3:hover {
-            background-color: #145234; /* Darker green on hover */
+            background-color: #145234;
         }
 
         .sub-step > h5 { /* Clickable sub-section titles */
-            background-color: #f0f4f8; /* Lighter, cooler grey */
-            color: #1c3d5a; /* Darker blue text for sub-headers */
-            padding: 12px 15px; /* Increased padding */
-            margin-top: 18px; /* Increased spacing */
+            background-color: #f0f4f8;
+            color: #1c3d5a;
+            padding: 12px 15px;
+            margin-top: 18px;
             margin-bottom: 0;
             cursor: pointer;
-            border-left: 5px solid #005c99; /* Thicker border */
+            border-left: 5px solid #005c99;
             border-radius: 5px;
-            font-size: 1.25em; /* Larger sub-step titles */
+            font-size: 1.25em;
             transition: background-color 0.2s ease;
             display: flex;
             justify-content: space-between;
@@ -109,17 +108,16 @@
             content: '▲';
         }
 
-
         .sub-step > h5:hover {
-            background-color: #dde8f0; /* Slightly darker grey on hover */
+            background-color: #dde8f0;
         }
 
         .content {
-            padding: 20px 25px; /* Increased padding */
-            border: 1px solid #e0e6ec; /* Softer border */
+            padding: 20px 25px;
+            border: 1px solid #e0e6ec;
             border-top: none;
             border-radius: 0 0 8px 8px;
-            background-color: #fdfdfe; /* Very light off-white */
+            background-color: #fdfdfe;
         }
 
         .content.hidden {
@@ -127,63 +125,63 @@
         }
 
         .content ul {
-            list-style-type: none; /* Remove default bullets */
-            padding-left: 0; /* Remove default padding */
+            list-style-type: none;
+            padding-left: 0;
         }
         .content ul li {
-            padding-left: 1.8em; /* Indent text more */
+            padding-left: 1.8em;
             position: relative;
-            margin-bottom: 10px; /* Increased spacing */
+            margin-bottom: 10px;
         }
-        .content ul li::before { /* Custom bullet points */
-            content: '•'; /* Bullet character */
-            color: #005c99; /* Bullet color */
+        .content ul li::before {
+            content: '•';
+            color: #005c99;
             font-weight: bold;
             position: absolute;
             left: 0;
-            top: 1px; /* Adjusted for line height */
+            top: 1px;
         }
 
         .content ul ul {
-            margin-left: 1.8em; /* Indent nested lists more */
+            margin-left: 1.8em;
             margin-top: 7px;
         }
         .content ul ul li::before {
-            content: '◦'; /* Different bullet for nested lists */
-            color: #1d7a4b; /* Green for L2 bullets */
+            content: '◦';
+            color: #1d7a4b;
         }
         .content ul ul ul li::before {
             content: '▪';
-            color: #ffab00; /* Amber for L3 bullets */
+            color: #ffab00;
         }
 
         .content p {
-            margin-bottom: 15px; /* Increased spacing */
+            margin-bottom: 15px;
         }
         .content p strong {
-            color: #004466; /* Darker blue for emphasis */
+            color: #004466;
         }
         .content em { /* Example questions styling */
-            color: #525860; /* Muted grey for examples */
+            color: #525860;
             font-style: italic;
             display: block;
-            margin-left: 25px; /* Indent example questions more */
+            margin-left: 25px;
             margin-top: 7px;
             margin-bottom: 7px;
-            padding: 8px 10px; /* Increased padding */
-            background-color: #f4f7f9; /* Slightly different background */
-            border-left: 4px solid #aab0b6; /* Softer border */
+            padding: 8px 10px;
+            background-color: #f4f7f9;
+            border-left: 4px solid #aab0b6;
             border-radius: 4px;
         }
-        .content em strong { /* Make parts of example questions bold if needed */
-            font-style: italic; /* Keep italic if nested in em */
+        .content em strong {
+            font-style: italic;
             color: #3e444a;
         }
 
         .framework-entry-list li {
-            padding: 10px 12px; /* Increased padding */
+            padding: 10px 12px;
             margin-bottom: 7px;
-            background-color: #e9f0f5; /* Lighter blue background */
+            background-color: #e9f0f5;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.2s ease;
@@ -198,14 +196,118 @@
 
         footer {
             text-align: center;
-            padding: 30px; /* Increased padding */
+            padding: 30px;
             margin-top: 40px;
-            background-color: #343a40; /* Dark grey footer */
+            background-color: #343a40;
             color: #f8f9fa;
             font-size: 1em;
         }
         footer p {
             margin-bottom: 10px;
+        }
+
+        /* --- Mobile Friendly Adjustments --- */
+        /* Media Query for screens smaller than 768px (typical tablets/large phones) */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.8em; /* Reduce header font size */
+                padding: 1.2rem 0;
+            }
+
+            .container {
+                width: 95%; /* Use more screen width */
+                padding: 0 10px; /* Reduce side padding */
+            }
+
+            section {
+                padding: 20px; /* Reduce padding inside sections */
+                margin-bottom: 25px;
+            }
+
+            section > h2 { /* Phase Titles */
+                font-size: 1.7em; /* Reduce phase title size */
+                padding-bottom: 12px;
+            }
+
+            .step > h3, .framework-section > h3 { /* Clickable main titles */
+                font-size: 1.4em; /* Reduce main title size */
+                padding: 12px 15px; /* Reduce padding */
+                 margin-top: 20px;
+            }
+             .step > h3::after, .framework-section > h3::after {
+                font-size: 0.6em; /* Adjust arrow size */
+             }
+
+
+            .sub-step > h5 { /* Clickable sub-section titles */
+                font-size: 1.15em; /* Reduce sub-title size */
+                padding: 10px 12px; /* Reduce padding */
+                margin-top: 15px;
+            }
+             .sub-step > h5::after {
+                 font-size: 0.7em;
+             }
+
+            .content {
+                padding: 15px 18px; /* Reduce padding inside content */
+            }
+
+            .content ul li {
+                padding-left: 1.5em; /* Slightly reduce bullet indent */
+                margin-bottom: 8px;
+            }
+            .content ul ul {
+                margin-left: 1.5em; /* Slightly reduce nested indent */
+            }
+
+            .content em { /* Example questions styling */
+                margin-left: 15px; /* Reduce example indent */
+                padding: 6px 8px;
+            }
+
+             .framework-entry-list li {
+                font-size: 1em; /* Adjust font size for framework list */
+             }
+
+            footer {
+                font-size: 0.9em; /* Reduce footer font size */
+                padding: 20px;
+            }
+        }
+
+         /* Media Query for screens smaller than 480px (typical phones) */
+        @media (max-width: 480px) {
+             header {
+                font-size: 1.5em; /* Further reduce header font size */
+                padding: 1rem 0;
+            }
+             section > h2 {
+                font-size: 1.4em; /* Further reduce phase title size */
+             }
+              .step > h3, .framework-section > h3 {
+                font-size: 1.2em; /* Further reduce main title size */
+                 padding: 10px 12px;
+            }
+             .sub-step > h5 {
+                 font-size: 1.05em; /* Further reduce sub-title size */
+                 padding: 8px 10px;
+                 border-left-width: 4px;
+             }
+             .content {
+                padding: 12px 15px;
+             }
+             .content ul li {
+                padding-left: 1.2em; /* Further reduce bullet indent */
+             }
+              .content ul ul {
+                margin-left: 1.2em;
+             }
+              .content em {
+                margin-left: 10px; /* Further reduce example indent */
+             }
+              footer {
+                font-size: 0.85em; /* Further reduce footer font size */
+             }
         }
     </style>
 </head>
